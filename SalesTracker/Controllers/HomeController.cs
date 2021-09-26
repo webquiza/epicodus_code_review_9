@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SalesTracker.Models;
 
 namespace SalesTracker.Controllers
 {

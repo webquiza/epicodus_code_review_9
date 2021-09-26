@@ -11,7 +11,12 @@
 <ol>
 @foreach (Order order in @Model["orders"])
 {
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  <ul>
+    <li>Description: @order.Description</li>
+    <li>Price: $@order.Price</li>
+    <li>Date: @order.Date</li>
+  </ul>
 }
 </ol>
 
