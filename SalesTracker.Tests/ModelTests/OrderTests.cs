@@ -21,19 +21,17 @@ namespace SalesTracker.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
-    //[TestMethod]
-    //public void GetDescription_ReturnsDescription_String()
-    //{
-      //Arrange
-      //string description = "Walk the dog.";
-
-      //Act
-      //Order newOrder = new Order(description);
-      //string result = newOrder.Description;
-
-      //Assert
-      //Assert.AreEqual(description, result);
-    //}
+    [TestMethod]
+    public void GetTitle_ReturnsTitle_String()
+    {
+      string title = "Order 1";
+      string description = "Order 1 description";
+      int price = 25;
+      string Date = "Date";
+      Order newOrder = new Order(title, description, price, Date);
+      string result = newOrder.Title;
+      Assert.AreEqual(title, result);
+    }
 
     //[TestMethod]
     //public void SetDescription_SetDescription_String()
