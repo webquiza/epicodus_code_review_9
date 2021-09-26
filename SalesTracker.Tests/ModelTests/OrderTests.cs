@@ -14,12 +14,12 @@ namespace SalesTracker.Tests
       Order.ClearAll();
     }
 
-    //[TestMethod]
-    //public void OrderConstructor_CreatesInstanceOfOrder_Order()
-    //{
-      //Order newOrder = new Order("test");
-      //Assert.AreEqual(typeof(Order), newOrder.GetType());
-    //}
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order("Order 1", "Order 1 description", 25, "Date");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
 
     //[TestMethod]
     //public void GetDescription_ReturnsDescription_String()
@@ -111,5 +111,5 @@ namespace SalesTracker.Tests
       //Assert.AreEqual(newOrder2, result);
     //}
 
-  //}
+  }
 }
