@@ -2,11 +2,14 @@
 
 #### By _**Carlos Urquiza**_
 
-#### _{Description}._
+#### _Web application that allows a business owner to keep track of their vendors and associated orders._
 
 ## Technologies Used
 
 * _C#_
+* _MVC_
+* _Razor View Engine_
+* _RESTful Routing_
 * _.NET 5.0_
 * _MSTest_
 * _Git_
@@ -15,12 +18,14 @@
 
 _This application has the following functionality:_
 
-* _._
-* _._
-* _._
-* _._
-
-* _All functionality for the models are tested using MSTest._
+* _Uses Razor View Engine to display information on each page._
+* _Creates a Vendor class. This class includes properties for the vendor's name, a description of the vendor and a List of Orders belonging to the vendor._
+* _Creates an Order class. This class includes properties for the title, the description, the price and date._
+* _The homepage of the application (localhost:5000/) has a splash page that welcomes Pierre and provides them with a link to a Vendors page._
+* _The vendors page contains a link to a page presenting Pierre with a form they can fill out to create a new Vendor. After the form is submitted, the new Vendor object is saved into a static List and Pierre is routed back to the homepage._
+* _Pierre is able to click a Vendor's name and go to a new page that displays all of that Vendor's orders._
+* _Pierre is provided with a link to a page presenting them with a form to create a new Order for a particular Vendor._
+* _All functionality for the Models are tested using MSTest._
 
 ## Setup/Installation Requirements
 
