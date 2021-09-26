@@ -31,7 +31,7 @@ _This application has the following functionality:_
 
 * **Before taking the following installation steps, ensure you have [C#, .NET](https://www.learnhowtoprogram.com/c-and-net-part-time-c-and-react-track/getting-started-with-c/installing-c-and-net) and [dotnet script](https://www.learnhowtoprogram.com/c-and-net-part-time-c-and-react-track/getting-started-with-c/installing-dotnet-script) installed on your computer.** 
 
-* _Clone this repository. 
+* _Clone this repository._ 
 * _Open your terminal._
 * _Navigate to the directory (such as your Desktop) where you want the cloned directory._
 * _Type `git clone` and paste the URL you copied._
@@ -48,7 +48,7 @@ _This application has the following functionality:_
 * _Navigate to `SalesTracker` by running `cd SalesTracker`._
 * _Run `dotnet restore` to retrieve and install the packages we listed in `.csproj`._
 * _Run `dotnet run`._
-* _View application via `http://localhost:5000`
+* _View application via `http://localhost:5000`_
 
 ## Known Bugs
 
