@@ -31,6 +31,16 @@ namespace SalesTracker.Tests
       Assert.AreEqual(name, result);
     }
 
+    [TestMethod]
+    public void GetDescription_ReturnsDescriptionString()
+    {
+      string name = "Vendor 1";
+      string description = "Vendor 1 description";
+      Vendor newVendor = new Vendor(name, description);
+      string result = newVendor.Description;
+      Assert.AreEqual(description, result);
+    }
+
     //[TestMethod]
     //public void GetId_ReturnsVendorId_Int()
     //{
