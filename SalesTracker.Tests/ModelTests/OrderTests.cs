@@ -69,6 +69,20 @@ namespace SalesTracker.Tests
       Assert.AreEqual(Date, result);
     }
 
+    [TestMethod]
+    public void SetTitle_SetTitle_String()
+    {
+      string title = "Order 1";
+      string description = "Order 1 description";
+      int price = 25;
+      string Date = "Date";
+      Order newOrder = new Order(title, description, price, Date);
+      string updatedTitle = "Order 1 Updated";
+      newOrder.Title = updatedTitle;
+      string result = newOrder.Title;
+      Assert.AreEqual(updatedTitle, result);
+    }
+
     //[TestMethod]
     //public void GetAll_ReturnsEmptyOrder_OrderList()
     //{
