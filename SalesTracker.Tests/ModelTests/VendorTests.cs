@@ -21,19 +21,15 @@ namespace SalesTracker.Tests
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
-    //[TestMethod]
-    //public void GetName_ReturnsName_String()
-    //{
-      //Arrange
-      //string name = "Test Category";
-      //Vendor newVendor = new Vendor(name);
-
-      //Act
-      //string result = newVendor.Name;
-
-      //Assert
-      //Assert.AreEqual(name, result);
-    //}
+    [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+      string name = "Vendor 1";
+      string description = "Vendor 1 description";
+      Vendor newVendor = new Vendor(name, description);     
+      string result = newVendor.Name;
+      Assert.AreEqual(name, result);
+    }
 
     //[TestMethod]
     //public void GetId_ReturnsVendorId_Int()
