@@ -65,21 +65,18 @@ namespace SalesTracker.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-    //[TestMethod]
-    //public void Find_ReturnsCorrectVendor_Vendor()
-    //{
-      //Arrange
-      //string name01 = "Work";
-      //string name02 = "School";
-      //Vendor newVendor1 = new Vendor(name01);
-      //Vendor newVendor2 = new Vendor(name02);
-
-      //Act
-      //Vendor result = Vendor.Find(2);
-
-      //Assert
-      //Assert.AreEqual(newVendor2, result);
-    //}
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name01 = "Vendor 1";
+      string name02 = "Vendor 2";
+      string description01 = "Vendor 1 description";
+      string description02 = "Vendor 2 description";
+      Vendor newVendor01 = new Vendor(name01, description01);
+      Vendor newVendor02 = new Vendor(name02, description02);
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor02, result);
+    }
 
     //[TestMethod]
     //public void AddOrder_AssociatesOrderWithVendor_OrderList()
