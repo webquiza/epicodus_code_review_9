@@ -121,5 +121,26 @@ namespace SalesTracker.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string title01 = "Order 1";
+      string title02 = "Order 2";
+      string description01 = "Order 1 description";
+      string description02 = "Order 2 description";
+      int price01 = 25;
+      int price02 = 50;
+      string Date01 = "Date 1";
+      string Date02 = "Date 2";
+      Order newOrder01 = new Order(title01, description01, price01, Date01);
+      Order newOrder02 = new Order(title02, description02, price02, Date02);
+
+      //Act
+      Order result = Order.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOrder02, result);
+    }
+
   }
 }
