@@ -109,5 +109,17 @@ namespace SalesTracker.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void GetId_OrderInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string title = "Order 1";
+      string description = "Order 1 description";
+      int price = 25;
+      string Date = "Date";
+      Order newOrder = new Order(title, description, price, Date);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
