@@ -41,19 +41,15 @@ namespace SalesTracker.Tests
       Assert.AreEqual(description, result);
     }
 
-    //[TestMethod]
-    //public void GetId_ReturnsVendorId_Int()
-    //{
-      //Arrange
-      //string name = "Test vendor";
-      //Vendor newVendor = new Vendor(name);
-
-      //Act
-      //int result = newVendor.Id;
-
-      //Assert
-      //Assert.AreEqual(1, result);
-    //}
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      string name = "Vendor 1";
+      string description = "Vendor 1 description";
+      Vendor newVendor = new Vendor(name, description);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
+    }
 
     //[TestMethod]
     //public void GetAll_ReturnsAllVendorObjects_VendorList()
