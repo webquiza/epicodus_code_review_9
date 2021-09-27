@@ -91,52 +91,23 @@ namespace SalesTracker.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-    //[TestMethod]
-    //public void GetAll_ReturnsOrders_OrderList()
-    //{
-      //Arrange
-      //string description01 = "Walk the dog";
-      //string description02 = "Wash the dishes";
-      //Order newOrder1 = new Order(description01);
-      //Order newOrder2 = new Order(description02);
-      //List<Order> newOrder = new List<Order> { newOrder1, newOrder2 };
-
-      //Act
-      //List<Order> result = Order.GetAll();
-
-      //Assert
-      //CollectionAssert.AreEqual(newOrder, result);
-    //}
-
-    //[TestMethod]
-    //public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
-    //{
-      //Arrange
-      //string description = "Walk the dog.";
-      //Order newOrder = new Order(description);
-
-      //Act
-      //int result = newOrder.Id;
-
-      //Assert
-      //Assert.AreEqual(1, result);
-    //}
-
-    //[TestMethod]
-    //public void Find_ReturnsCorrectOrder_Order()
-    //{
-      //Arrange
-      //string description01 = "Walk the dog";
-      //string description02 = "Wash the dishes";
-      //Order newOrder1 = new Order(description01);
-      //Order newOrder2 = new Order(description02);
-
-      //Act
-      //Order result = Order.Find(2);
-
-      //Assert
-      //Assert.AreEqual(newOrder2, result);
-    //}
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string title01 = "Order 1";
+      string title02 = "Order 2";
+      string description01 = "Order 1 description";
+      string description02 = "Order 2 description";
+      int price01 = 25;
+      int price02 = 50;
+      string Date01 = "Date 1";
+      string Date02 = "Date 2";
+      Order newOrder01 = new Order(title01, description01, price01, Date01);
+      Order newOrder02 = new Order(title02, description02, price02, Date02);
+      List<Order> newList = new List<Order> { newOrder01, newOrder02 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
 
   }
 }
