@@ -134,11 +134,7 @@ namespace SalesTracker.Tests
       string Date02 = "Date 2";
       Order newOrder01 = new Order(title01, description01, price01, Date01);
       Order newOrder02 = new Order(title02, description02, price02, Date02);
-
-      //Act
       Order result = Order.Find(2);
-
-      //Assert
       Assert.AreEqual(newOrder02, result);
     }
 
