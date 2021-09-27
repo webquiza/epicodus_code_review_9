@@ -78,23 +78,21 @@ namespace SalesTracker.Tests
       Assert.AreEqual(newVendor02, result);
     }
 
-    //[TestMethod]
-    //public void AddOrder_AssociatesOrderWithVendor_OrderList()
-    //{
-      //Arrange
-      //string description = "Walk the dog.";
-      //Order newOrder = new Order(description);
-      //List<Order> newList = new List<Order> { newOrder };
-      //string name = "Work";
-      //Vendor newVendor = new Vendor(name);
-      //newVendor.AddOrder(newOrder);
-
-      //Act
-      //List<Order> result = newVendor.Orders;
-
-      //Assert
-      //CollectionAssert.AreEqual(newList, result);
-    //}
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string title = "Order 1";
+      string description = "Order 1 description";
+      int price = 25;
+      string Date = "Date";
+      Order newOrder = new Order(title, description, price, Date);
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "Vendor 1";
+      Vendor newVendor = new Vendor(name, description);
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
 
   }
 }
