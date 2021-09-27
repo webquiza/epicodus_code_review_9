@@ -83,18 +83,13 @@ namespace SalesTracker.Tests
       Assert.AreEqual(updatedTitle, result);
     }
 
-    //[TestMethod]
-    //public void GetAll_ReturnsEmptyOrder_OrderList()
-    //{
-      // Arrange
-      //List<Order> newOrder = new List<Order> { };
-
-      // Act
-      //List<Order> result = Order.GetAll();
-
-      // Assert
-      //CollectionAssert.AreEqual(newOrder, result);
-   // }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> { };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
 
     //[TestMethod]
     //public void GetAll_ReturnsOrders_OrderList()
